@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 
+import { DBModule } from './utils/db.js';
 import UsersModule from './modules/users/users.module.js';
-import {RandomDicesModule} from './modules/test/random-dices/random-dices.module.js'
 
 @Module({
-  // import - собирает все отдельные модили нашего приложение
-  imports: [RandomDicesModule, UsersModule],
+  // imports - собирает все отдельные модили нашего приложение
+  imports: [DBModule, UsersModule],
 })
 export class AppModule {}
